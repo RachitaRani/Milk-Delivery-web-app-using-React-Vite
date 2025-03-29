@@ -217,7 +217,7 @@
 
 //.....With Springboot APIs..
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Package, Clock, CheckCircle, XCircle, CreditCard, Wallet, Search } from 'lucide-react';
 import axios from "axios";
 
@@ -350,11 +350,11 @@ export function AdminOrders() {
   };
 
   // Delete the order
-  const handleDeleteOrder = async (orderId: string) => {
-    if (confirm('Are you sure you want to cancel this order?')) {
-      await handleUpdateStatus(orderId, 'CANCELLED');
-    }
-  };
+  // const handleDeleteOrder = async (orderId: string) => {
+  //   if (confirm('Are you sure you want to cancel this order?')) {
+  //     await handleUpdateStatus(orderId, 'CANCELLED');
+  //   }
+  // };
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">

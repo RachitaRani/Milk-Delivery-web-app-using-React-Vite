@@ -435,6 +435,7 @@ export function Home() {
     axios
       .post('http://localhost:8080/api/orders', orderData) // Replace with your order submission endpoint
       .then((response) => {
+        console.log("Response:",response)
         alert('Order placed successfully!');
         setSelectedMilk(null);
         setShowConfirmation(false);

@@ -204,8 +204,8 @@
 // }
 
 // ....With backend APIs built in springboot
-import React, { useState, useEffect } from "react";
-import { Plus, Edit2, Save, Trash, Trash2, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Plus, Edit2, Save, Trash2, X } from "lucide-react";
 import axios from "axios";
 
 interface InventoryItem {
