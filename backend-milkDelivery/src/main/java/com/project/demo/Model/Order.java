@@ -2,6 +2,9 @@ package com.project.demo.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
+
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -22,9 +25,14 @@ public class Order {
 
     private int quantity;
 
+    private String orderStatus;
+
     private String paymentMode;
 
     private double totalPrice;
+
+    @CreatedDate
+    private LocalDateTime createdAt;
 
     public Long getId() {
         return id;
@@ -88,5 +96,21 @@ public class Order {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 }

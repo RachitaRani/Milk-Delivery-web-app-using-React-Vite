@@ -1,8 +1,6 @@
 package com.project.demo.Controller;
 
-import com.project.demo.Model.Inventory;
 import com.project.demo.Model.Order;
-import com.project.demo.Repository.InventoryRepository;
 import com.project.demo.Repository.OrderRepository;
 import com.project.demo.Service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +16,7 @@ import java.util.Optional;
 public class OrderController {
     @Autowired
     private OrderRepository orderRepository;
-    private final OrderService orderService;
+    private OrderService orderService;
 
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
@@ -68,14 +66,19 @@ public class OrderController {
     public ResponseEntity<List<String>> getPaymentModes() {
         return ResponseEntity.ok(orderService.getPaymentModes());
     }
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteOrderItem(@PathVariable Long id){
-        Optional<Order> item = orderRepository.findById(id);
 
-        if (item.isPresent()) {
-            orderRepository.deleteById(id); // Directly delete the item from the repository
-            return ResponseEntity.ok("Item deleted successfully!");
-        } else {
-            return ResponseEntity.status(404).body("Item not found!");
+    @PutMapping("/{id}")
+    public void updateOrderStatus(@PathVariable Long id, @RequestBody String orderStatus) {
+       orderService.updateStatus(id,orderStatus);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteOrder(@PathVariable Long id) {
+        try {
+            orderService.deleteOrder(id);
+            return ResponseEntity.ok("Order deleted successfully");
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(404).body(e.getMessage()); // Order not found
         }
-    }}
+    }
+}
