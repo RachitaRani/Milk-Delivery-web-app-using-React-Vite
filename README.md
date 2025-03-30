@@ -98,11 +98,8 @@ spring.datasource.password=yourpassword
 ### Home Page
 ![Home Page](/Assets/HomePage.png)
 
-### Order Review
-![Order Review](https://github.com/RachitaRani/Milk-Delivery-web-app-using-React-Vite/Assets/InventoryManagement.png)
-
 ### Admin Inventory Management
-![Admin Inventory](https://github.com/RachitaRani/Milk-Delivery-web-app-using-React-Vite/Assets/)
+![Admin Inventory](/Assets/InventoryManagement.png)
 
 ### Admin Order Management
 ![Admin Orders](https://github.com/yourusername/milk-delivery-app/raw/main/screenshots/admin-orders.png)
@@ -119,8 +116,5 @@ spring.datasource.password=yourpassword
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📞 Contact
-For any questions or suggestions, please contact [your-email@example.com](mailto:your-email@example.com)
+For any questions or suggestions, please contact [rachitaraj113@gmail.com](mailto:your-rachitaraj113@gmail.com)
