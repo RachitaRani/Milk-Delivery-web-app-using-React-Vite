@@ -96,10 +96,10 @@ spring.datasource.password=yourpassword
 ## 📷 Screenshots
 
 ### Home Page
-![Home Page](https://github.com/RachitaRani/Milk-Delivery-web-app-using-React-Vite/Assets/HomePage.png)
+![Home Page](/Assets/HomePage.png)
 
 ### Order Review
-![Order Review](https://github.com/RachitaRani/Milk-Delivery-web-app-using-React-Vite/Assets/AdminInventory.png)
+![Order Review](https://github.com/RachitaRani/Milk-Delivery-web-app-using-React-Vite/Assets/InventoryManagement.png)
 
 ### Admin Inventory Management
 ![Admin Inventory](https://github.com/RachitaRani/Milk-Delivery-web-app-using-React-Vite/Assets/)
