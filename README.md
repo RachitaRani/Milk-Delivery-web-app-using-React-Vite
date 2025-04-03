@@ -1,28 +1,29 @@
 # 🥛 Milk Delivery App
 
-A full-stack web application for ordering and managing milk delivery services. The application allows users to browse different types of milk, place orders, and provides admin functionality to manage inventory and track orders.
+A full-stack web application for ordering and managing milk delivery services. The application allows users to browse different types of milk and place orders and provides admin functionality to manage inventory and track orders.
 
 ## 🚀 Features
 
 ### Customer Features
 - **Browse Milk Products**: View various types of milk with details like price per liter and available quantity
-- **Order Management**: Add milk to cart and place orders
+- **Order Management**: Add milk to the cart and place orders
 - **Order Review**: Review orders before final placement
-- **User Authentication**: Secure login and registration system
 
 ### Admin Features
 - **Inventory Management**: Add, update, and remove milk products
 - **Price Management**: Modify pricing for different milk types
 - **Order Tracking**: View all customer orders with detailed information
+- **Admin Authorization feature
 - **Advanced Filtering**: Filter orders by:
   - Status (Confirmed, Pending, Delivered, Canceled)
-  - Date range
+  - Date Range
   - Keyword search
 
 ## 💻 Tech Stack
 
 ### Frontend
 - **React** with **Vite** for enhanced development experience
+- Chart.js for better visualisation
 - **Tailwind CSS** for responsive and modern UI design
 - **React Router** for navigation
 - **Axios** for API communication
@@ -57,7 +58,7 @@ npm run dev
 
 ### Backend Setup
 ```bash
-# Navigate to backend directory
+# Navigate to the backend directory
 cd ../backend-milkDelivery
 
 # Build the application
@@ -92,17 +93,21 @@ spring.datasource.password=yourpassword
 - `PUT /api/inventory/:id` - Update milk product
 - `DELETE /api/inventory/:id` - Remove milk product
 - `GET /api/orders/viewallorders` - Get all orders with optional filters
+- `PUT /api/orders/updateOrderStatus/:id` - Update status of orders(Pending,Confirmed,Delivered,Cancelled)
 
 ## 📷 Screenshots
 
 ### Home Page
 ![Home Page](/Assets/HomePage.png)
 
-### Admin Inventory Management
-![Admin Inventory](/Assets/InventoryManagement.png)
+### Admin Login
+![Admin Inventory](/Assets/AdminLogin.png)
+
+### Admin Dashboard
+![Admin Inventory](/Assets/AdminDashboard.png)
 
 ### Admin Order Management
-![Admin Orders](https://github.com/yourusername/milk-delivery-app/raw/main/screenshots/admin-orders.png)
+![Admin Orders](/Assets/AdminOrdersManagement.png)
 
 ## 🔮 Future Scope
 
